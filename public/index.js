@@ -1,11 +1,12 @@
-var api = process.env.API_KEY; // get your own api (https://www.alphavantage.co/support/#api-key)
+
+var api = process.env.API_KEY// get your own api (https://www.alphavantage.co/support/#api-key)
 var dps = [];
 var company = null;
 var symbol = null;
 var chart = null;
 var columns = ["Date", "Open", "High", "Low", "Close", "Adjusted Close", "Volume"];
 var data1 = []
-
+console.log(process.env.API_KEY)
 function download(){
   window.location = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol="+symbol+"&apikey="+api+"&datatype=csv";
 }
